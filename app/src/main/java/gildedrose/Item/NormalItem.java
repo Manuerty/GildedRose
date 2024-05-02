@@ -1,5 +1,6 @@
 package gildedrose.Item;
 
+
 public class NormalItem extends Item{
     public NormalItem(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
@@ -14,7 +15,7 @@ public class NormalItem extends Item{
             --quality;
             return;
         }
-        quality -= 2;
+        quality = Math.max(quality - 2, 0);
     }
 
     @Override
