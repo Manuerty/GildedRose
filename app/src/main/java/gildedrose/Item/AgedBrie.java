@@ -1,8 +1,7 @@
 package gildedrose.Item;
 
-
-public class NormalItem extends Item{
-    public NormalItem(String name, int sellIn, int quality) {
+public class AgedBrie extends Item{
+    public AgedBrie(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
     public void updateItem() {
@@ -11,11 +10,11 @@ public class NormalItem extends Item{
     }
     @Override
     public void updateQuality(){
-        if (sellIn > 0 && checkQuality()){
-            quality = Math.max(quality - 1, 0);
+        if (sellIn >= 0 && checkQuality()){
+            quality = Math.min(quality + 1, 50);
             return;
         }
-        quality = Math.max(quality - 2, 0);
+        quality = Math.min(quality + 2, 50);
     }
 
     @Override
@@ -26,6 +25,7 @@ public class NormalItem extends Item{
     private boolean checkQuality(){
         return quality <= 50 && quality >= 0;
     }
+
     public int getQuality() {
         return quality;
     }
@@ -34,4 +34,3 @@ public class NormalItem extends Item{
         return sellIn;
     }
 }
-
