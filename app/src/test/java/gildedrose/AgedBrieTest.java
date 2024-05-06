@@ -14,6 +14,13 @@ public class AgedBrieTest {
     }
 
     @Test
+    public void qualityIncreasesByTwoWhenSellInIsZero() {
+        AgedBrie agedBrie = new AgedBrie("Aged Brie", 0, 10);
+        agedBrie.updateItem();
+        assertEquals(12, agedBrie.getQuality());
+    }
+
+    @Test
     public void qualityIncreasesByTwoWhenSellInIsNegative() {
         AgedBrie agedBrie = new AgedBrie("Aged Brie", -1, 10);
         agedBrie.updateItem();

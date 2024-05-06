@@ -5,12 +5,12 @@ public class AgedBrie extends Item{
         super(name, sellIn, quality);
     }
     public void updateItem() {
-        updateQuality();
         updateSellIn();
+        updateQuality();
     }
     @Override
     public void updateQuality(){
-        if (sellIn >= 0 && checkQuality()){
+        if (sellIn > 0 && checkQuality()){
             quality = Math.min(quality + 1, 50);
             return;
         }
