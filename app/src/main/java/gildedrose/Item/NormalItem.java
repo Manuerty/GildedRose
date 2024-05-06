@@ -6,8 +6,8 @@ public class NormalItem extends Item{
         super(name, sellIn, quality);
     }
     public void updateItem() {
-        updateQuality();
         updateSellIn();
+        updateQuality();
     }
     @Override
     public void updateQuality(){

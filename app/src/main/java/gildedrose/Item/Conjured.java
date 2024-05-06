@@ -7,8 +7,8 @@ public class Conjured extends Item{
     }
     
     public void updateItem() {
-        updateQuality();
         updateSellIn();
+        updateQuality();
     }
     
     @Override
