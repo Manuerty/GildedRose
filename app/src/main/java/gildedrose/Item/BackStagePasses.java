@@ -5,16 +5,16 @@ public class BackStagePasses extends Item{
         super(name, sellIn, quality);
     }
     public void updateItem() {
-        updateQuality();
         updateSellIn();
+        updateQuality();
     }
     @Override
     public void updateQuality(){
-        if (sellIn > 10 && checkQuality()){
+        if (sellIn >= 10 && checkQuality()){
             quality = Math.min(quality + 1, 50);
             return;
         }
-        if(sellIn <= 10 && sellIn > 5 && checkQuality()){
+        if(sellIn < 10 && sellIn > 5 && checkQuality()){
             quality = Math.min(quality + 2, 50);
             return;
         }
