@@ -1,6 +1,7 @@
 package gildedrose;
 
 import gildedrose.Item.*;
+import org.checkerframework.checker.units.qual.C;
 
 
 public class TexttestFixture {
@@ -11,14 +12,14 @@ public class TexttestFixture {
                 new NormalItem("+5 Dexterity Vest", 10, 20), //
                 new NormalItem("Elixir of the Mongoose", 5, 7), //
 
-                new AgedBrie("Aged Brie", 2, 0)}; //
-                /* new NormalItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-                new NormalItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-                new NormalItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
-                new NormalItem("Sulfuras, Hand of Ragnaros", 0, 80), //
-                new NormalItem("Sulfuras, Hand of Ragnaros", -1, 80),
+                new AgedBrie("Aged Brie", 2, 0), //
+                new BackStagePasses("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+                new BackStagePasses("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+                new BackStagePasses("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+                new Sulfuras("Sulfuras, Hand of Ragnaros", 0, 80), //
+                new Sulfuras("Sulfuras, Hand of Ragnaros", -1, 80),
                 // this conjured item does not work properly yet
-                new NormalItem("Conjured Mana Cake", 3, 6) };*/
+                new Conjured("Conjured Mana Cake", 3, 6)};
 
         GildedRose app = new GildedRose(items);
 

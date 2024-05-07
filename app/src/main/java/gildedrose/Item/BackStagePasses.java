@@ -8,6 +8,7 @@ public class BackStagePasses extends Item{
         updateSellIn();
         updateQuality();
     }
+
     @Override
     public void updateQuality(){
         if (sellIn >= 10 && checkQuality()){
@@ -33,6 +34,7 @@ public class BackStagePasses extends Item{
     private boolean checkQuality(){
         return quality <= 50 && quality >= 0;
     }
+
     public int getQuality() {
         return quality;
     }

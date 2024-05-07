@@ -13,6 +13,7 @@ public class App {
             new Sulfuras("Sulfuras, Hand of Ragnaros", 0, 80),
             new Conjured("Conjured Mana Cake", 3, 6)
         };
+
         GildedRose gr = new GildedRose(items);
         for (int i = 1; i <= 11; ++i) {
             System.out.printf("----Día %d----\n", i);
